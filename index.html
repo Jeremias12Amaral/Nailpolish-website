@@ -3,10 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nail Polish</title>
+  <title>Polished — Nail Lacquer</title>
+  <meta name="description" content="Long-wear, vegan nail lacquer in shades made to be noticed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Nail Polish</h1>
-  <p>Coming soon.</p>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo">Polished<span>.</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="#shades">Shades</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#shades" class="bag">Bag (<span id="bag-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">New · The Winter Edit</p>
+          <h1>Color that lasts<br>as long as you do.</h1>
+          <p class="lead">Vegan, 10-free nail lacquer with salon-level shine and up to 10 days of chip-free wear.</p>
+          <div class="hero-actions">
+            <a href="#shades" class="btn btn-primary">Shop shades</a>
+            <a href="#about" class="btn btn-ghost">Our story</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bottle" style="--c:#b3124a"></div>
+          <div class="bottle tall" style="--c:#e8a0a8"></div>
+          <div class="bottle" style="--c:#3b2a5c"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="perks">
+      <div class="container perks-grid">
+        <div><strong>10-free</strong><span>No harsh chemicals</span></div>
+        <div><strong>Vegan</strong><span>Cruelty-free, always</span></div>
+        <div><strong>10 days</strong><span>Chip-resistant wear</span></div>
+        <div><strong>Free shipping</strong><span>On orders over $35</span></div>
+      </div>
+    </section>
+
+    <section id="shades" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Find your shade</h2>
+          <div class="filters" role="group" aria-label="Filter by finish">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="creme">Crème</button>
+            <button class="filter" data-filter="shimmer">Shimmer</button>
+            <button class="filter" data-filter="glitter">Glitter</button>
+          </div>
+        </div>
+        <div class="shade-grid" id="shade-grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container about-inner">
+        <div class="about-swatches" aria-hidden="true">
+          <span style="--c:#d94f70"></span><span style="--c:#f2c4b8"></span>
+          <span style="--c:#6b1f3a"></span><span style="--c:#c9a27e"></span>
+        </div>
+        <div>
+          <h2>Made small, made well</h2>
+          <p>Polished started at a kitchen table with one question: why does great nail color have to chip in two days? Every shade is mixed in small batches, tested on real nails for real weeks, and bottled with a wide, flat brush that makes a perfect coat easy.</p>
+          <p>No formaldehyde, toluene, DBP, or the rest of the usual suspects — just rich, glossy color.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="container">
+        <h2 class="center">Loved on every hand</h2>
+        <div class="reviews">
+          <blockquote>
+            <p>“Two coats, no top coat, and it still looked fresh after a week of dishes.”</p>
+            <cite>— Maya R.</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Velvet Plum is the most compliment-getting color I own.”</p>
+            <cite>— Jordan T.</cite>
+          </blockquote>
+          <blockquote>
+            <p>“The brush is genuinely the best I’ve used. Easy even with my left hand.”</p>
+            <cite>— Priya S.</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section newsletter">
+      <div class="container narrow center">
+        <h2>Get first dibs on new shades</h2>
+        <p>Join the list for launches, restocks, and 15% off your first order.</p>
+        <form id="signup-form" class="signup">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+        </form>
+        <p id="signup-msg" class="signup-msg" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Polished</span>
+      <span>Vegan · Cruelty-free · 10-free</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
